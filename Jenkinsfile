@@ -9,6 +9,7 @@ pipeline {
         CI = 'true'
     }
     stages {
+        when { changeset ("src/*" ) }
         stage('Build') { 
             steps {
                 sh 'npm install' 
